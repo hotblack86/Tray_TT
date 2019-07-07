@@ -38,4 +38,9 @@ describe("Data Handler class", function() {
     expect(datahandler.dirtPatches()).toEqual([[1, 0], [2, 2], [2,3]])
   })
 
+  it("Should return the driving instructions from the array", function() {
+    datahandler.parse('./input.txt')
+    expect(datahandler.drivingDirections()).toEqual([ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ])
+  })
+
 })

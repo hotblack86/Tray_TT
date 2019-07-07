@@ -24,14 +24,18 @@ class DataHandler {
     return result.map(x => x.map(Number)); 
   }
 
+  drivingDirections() {
+    return this.datastore.slice(-1)[0].split('');
+  }
+
 
 }
 
 
-// datahandler = new DataHandler();
-// datahandler.parse('./input.txt');
-// console.log(datahandler.datastore);
-// console.log(datahandler.dirtPatches());
+datahandler = new DataHandler();
+datahandler.parse('./input.txt');
+console.log(datahandler.datastore);
+console.log(datahandler.drivingDirections());
 
 
 
