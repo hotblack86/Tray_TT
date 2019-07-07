@@ -4,7 +4,9 @@
   "description": "Implementation & Sales Engineer Technical Exercise",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "start": "node ./bin/www",
+    "debug": "nodemon --inspect ./bin/www"
   },
   "repository": {
     "type": "git",
