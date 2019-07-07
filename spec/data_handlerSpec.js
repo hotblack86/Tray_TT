@@ -23,4 +23,19 @@ describe("Data Handler class", function() {
     expect(datahandler.datastore).toEqual(dataArray);
   });
 
+  it("Should return the room dimensions from the array as integers", function() {
+    datahandler.parse('./input.txt')
+    expect(datahandler.roomDimensions()).toEqual([5, 5])
+  })
+
+  it("Should return the hoover position from the array as integers", function() {
+    datahandler.parse('./input.txt')
+    expect(datahandler.hooverPosition()).toEqual([1, 2])
+  })
+
+  it("Should return the dirt patch positions from the array as integers", function() {
+    datahandler.parse('./input.txt')
+    expect(datahandler.dirtPatches()).toEqual([[1, 0], [2, 2], [2,3]])
+  })
+
 })
