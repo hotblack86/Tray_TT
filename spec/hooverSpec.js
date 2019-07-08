@@ -8,10 +8,12 @@ describe("Hoover class", function() {
   }
   const testStartingPosition = [1, 2];
 
-  const testDirectionsSmall = [ 'N', 'N', 'E' ];
-  const testEndPositionSmall = [2, 4];
+  // const testDirectionsSmall = [ 'N', 'N', 'E' ];
+  // const testEndPositionSmall = [2, 4];
 
-  const testDirectionsFull = [ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ];
+  const testDirections = [ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ];
+  const testEndPosition = [1, 3];
+
   const hoover = new Hoover(testFloor, testStartingPosition);
   
   it("Should receive Floor object and hoover starting position initially", function() {
@@ -20,9 +22,9 @@ describe("Hoover class", function() {
     expect(hoover.dirtCleaned).toEqual(0)
   })
 
-  it("Should move hoover north by 2, east by 1", function() {
-    hoover.move(testDirectionsSmall);
-    expect(hoover.position).toEqual(testEndPositionSmall);
+  it("Should move hoover using full test directions", function() {
+    hoover.move(testDirections);
+    expect(hoover.finalPosition()).toEqual(testEndPosition);
   })
 
 

@@ -12,6 +12,10 @@ class Hoover {
         this.position[1] += 1;
       else if (x == 'E')
         this.position[0] += 1;
+      else if (x == 'S')
+        this.position[1] -= 1;
+      else
+        this.position[0] -= 1;  
     })
   } 
 
