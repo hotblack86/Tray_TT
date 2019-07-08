@@ -32,10 +32,10 @@ class DataHandler {
 }
 
 
-datahandler = new DataHandler();
-datahandler.parse('./input.txt');
-console.log(datahandler.datastore);
-console.log(datahandler.drivingDirections());
+// datahandler = new DataHandler();
+// datahandler.parse('./input.txt');
+// console.log(datahandler.datastore);
+// console.log(datahandler.drivingDirections());
 
 
 
