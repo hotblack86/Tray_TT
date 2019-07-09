@@ -2,13 +2,18 @@ const Hoover = require('../src/Hoover')
 
 describe("Hoover class constructor", function() {
 
-  const testFloor =  {
-    dimensions: [5, 5],
-    dirtPatches: [ [ 1, 0 ], [ 2, 2 ], [ 2, 3 ] ] 
-  }
-  const testStartingPosition = [1, 2];
+  beforeEach(function() {
+    testFloor =  {
+      dimensions: [5, 5],
+      dirtPatches: [ [ 1, 0 ], [ 2, 2 ], [ 2, 3 ] ] 
+    };
+    testStartingPosition = [1, 2];
+    hoover = new Hoover(testFloor, testStartingPosition);
 
-  const hoover = new Hoover(testFloor, testStartingPosition);
+    testDirections = [ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ];
+    testEndPosition = [1, 3];
+
+  });
   
   it("Should receive Floor object and hoover starting position initially", function() {
     expect(hoover.floor).toEqual(testFloor);
@@ -20,8 +25,6 @@ describe("Hoover class constructor", function() {
 
 describe("#move", function() {
 
-  const testDirections = [ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ];
-  const testEndPosition = [1, 3];
 
   it("Should move hoover using full test directions and return final position", function() {
     hoover.move(testDirections);
