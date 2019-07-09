@@ -10,13 +10,28 @@ class Hoover {
   move(directions) { 
     directions.map(x => {
       if (x == 'N') {
-        if(!this.wall()) this.position[1] += 1; }
+        this.position[1] += 1;
+        if(this.wall())  
+          this.position[1] -= 1;
+      }
       else if (x == 'E') {
-        if(!this.wall()) this.position[0] += 1; }
+        this.position[0] += 1; 
+        if(this.wall())
+        this.position[0] -= 1;
+      }
       else if (x == 'S') {
-        if(!this.wall()) this.position[1] -= 1; }
+        this.position[1] -= 1; 
+        if(this.wall()) 
+          this.position[1] += 1;
+      }
+      else if (x == 'W') {
+        this.position[0] -= 1;
+        if(this.wall())  
+          this.position[0] += 1;
+      }
       else {
-        if(!this.wall()) this.position[0] -= 1; }
+        throw new Error("Invalid Coordinate")
+      }  
     this.clean();
     })  
   }
@@ -57,8 +72,8 @@ console.log(hoover.floor.dimensions);
 console.log(hoover.position);
 console.log(hoover.floor.dirtPatches);
 console.log('\n');
-// hoover.move([ 'N', 'N', 'E', 'N' ])
-hoover.move([ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ]);
+hoover.move([ 'N', 'N', 'N', 'W', 'W' ])
+// hoover.move([ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ]);
 console.log(hoover.position.join(' '));
 console.log(hoover.dirtCleaned.toString());
 console.log(hoover.floor.dirtPatches);

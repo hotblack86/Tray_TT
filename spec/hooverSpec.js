@@ -8,10 +8,14 @@ describe("Hoover Class", function() {
       dirtPatches: [ [ 1, 0 ], [ 2, 2 ], [ 2, 3 ] ] 
     };
     testStartingPosition = [1, 2];
+
     hoover = new Hoover(testFloor, testStartingPosition);
+
     testDirections = [ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ];
     testEndPosition = [1, 3];
-    testInvalidDirections = [ 'W', 'W', 'W' ];
+
+    testInvalidDirections = [ 'N', 'N', 'N', 'W', 'W' ];
+    testInvalidEndPosition = [0, 4];
   });
   
   it("Should receive Floor object and hoover starting position initially", function() {
@@ -30,8 +34,13 @@ describe("Hoover Class", function() {
     expect(hoover.dirtCleaned).toEqual(1);
   })
 
-  it("Should return true if hoover tries to move outside of floor grid", function() {
+  // it("Should return true if hoover tries to move outside of floor grid", function() {
+  //   hoover.move(testInvalidDirections);
+  //   expect(hoover.wall()).toEqual(true);
+  // })
+
+  it("Should return final hoover position after bumping into wall twice", function() {
     hoover.move(testInvalidDirections);
-    expect(hoover.wall()).toEqual(true);
+    expect(hoover.position).toEqual(testInvalidEndPosition);
   })
 })
