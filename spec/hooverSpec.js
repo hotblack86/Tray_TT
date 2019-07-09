@@ -16,6 +16,8 @@ describe("Hoover Class", function() {
 
     testInvalidDirections = [ 'N', 'N', 'N', 'W', 'W' ];
     testInvalidEndPosition = [0, 4];
+
+    testNonCardinalDirections = [ 'N', 'R', 'N', '7', 'W' ];
   });
   
   it("Should receive Floor object and hoover starting position initially", function() {
@@ -24,20 +26,32 @@ describe("Hoover Class", function() {
     expect(hoover.dirtCleaned).toEqual(0)
   })
 
-  it("Should move hoover using full test directions and return final position", function() {
+  it("#move Should move hoover using full test directions and return final position", function() {
     hoover.move(testDirections);
     expect(hoover.position).toEqual(testEndPosition);
   })
 
-  it("Should remove cleaned dirt patches from floor and return number of dirt patches cleaned", function() {
+  it("#move Should remove cleaned dirt patches from floor and return number of dirt patches cleaned", function() {
     hoover.move(testDirections);
     expect(hoover.dirtCleaned).toEqual(1);
   })
 
-  // it("Should return true if hoover tries to move outside of floor grid", function() {
-  //   hoover.move(testInvalidDirections);
-  //   expect(hoover.wall()).toEqual(true);
-  // })
+  it("#move Should throw an error if an invalid is passed into it" ,()=>{
+    expect(()=>hoover.move(testNonCardinalDirections)).toThrow(new Error("Invalid Coordinate"))
+  })
+
+
+  it("#move Should call the clean method", ()=>{
+    spyOn(hoover, 'clean');
+    hoover.move(testDirections);
+    expect(hoover.clean).toHaveBeenCalled();
+  })
+
+  it("#move Should call the wall method", ()=>{
+    spyOn(hoover, 'wall');
+    hoover.move(testDirections);
+    expect(hoover.wall).toHaveBeenCalled();
+  })
 
   it("Should return final hoover position after bumping into wall twice", function() {
     hoover.move(testInvalidDirections);
