@@ -63,21 +63,4 @@ class Hoover {
 }
 
 
-hoover = new Hoover({
-  dimensions: [5, 5],
-  dirtPatches: [ [ 1, 0 ], [ 2, 2 ], [ 2, 3 ] ] 
-}, [1, 2]);
-
-console.log(hoover.floor.dimensions);
-console.log(hoover.position);
-console.log(hoover.floor.dirtPatches);
-console.log('\n');
-hoover.move([ 'N', 'N', 'N', 'W', 'W' ])
-// hoover.move([ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ]);
-console.log(hoover.position.join(' '));
-console.log(hoover.dirtCleaned.toString());
-console.log(hoover.floor.dirtPatches);
-// console.log(hoover.finalPosition());
-
-
 module.exports = Hoover;

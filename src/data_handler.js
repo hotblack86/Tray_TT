@@ -17,7 +17,7 @@ class DataHandler {
 
   hooverPosition() {
     return this.datastore[1].split(' ').map(Number);
- } 
+  } 
 
   dirtPatches() {
     var result =  this.datastore.slice(2, -1).map(x => x.split(' '));
@@ -27,19 +27,7 @@ class DataHandler {
   drivingDirections() {
     return this.datastore.slice(-1)[0].split('');
   }
-
-
 }
-
-
-// datahandler = new DataHandler();
-// datahandler.parse('./input.txt');
-// console.log(datahandler.datastore);
-// console.log(datahandler.drivingDirections());
-
-
-
-
 
 
 module.exports = DataHandler;

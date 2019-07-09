@@ -36,6 +36,11 @@ describe("Hoover Class", function() {
     expect(hoover.dirtCleaned).toEqual(1);
   })
 
+  it("Should remove dirt patches from dirt patch array", function() {
+    hoover.move(testDirections);
+    expect(hoover.floor.dirtPatches).toEqual([ [ 1, 0 ], [ 2, 2 ] ]);
+  })
+
   it("#move Should throw an error if an invalid is passed into it" ,()=>{
     expect(()=>hoover.move(testNonCardinalDirections)).toThrow(new Error("Invalid Coordinate"))
   })
@@ -52,6 +57,8 @@ describe("Hoover Class", function() {
     hoover.move(testDirections);
     expect(hoover.wall).toHaveBeenCalled();
   })
+
+
 
   it("Should return final hoover position after bumping into wall twice", function() {
     hoover.move(testInvalidDirections);
