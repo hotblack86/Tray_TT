@@ -6,10 +6,5 @@ class Floor {
   }
 }
 
-
-// floor = new Floor([5,5], [[1, 0], [2, 2], [2,3]]);
-// console.log(floor.dimensions);
-// console.log(floor.dirtPatches);
-
 module.exports = Floor;
 
