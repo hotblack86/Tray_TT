@@ -2,16 +2,14 @@ describe("Data Handler class", function() {
   const DataHandler = require('../src/data_handler')
   var datahandler;
 
-  const dataArray = ["5 5",
+  beforeEach(function() {
+    datahandler = new DataHandler();
+    dataArray = ["5 5",
     "1 2",
     "1 0",
     "2 2",
     "2 3",
-   "NNESEESWNWW"]
-
-
-  beforeEach(function() {
-    datahandler = new DataHandler();
+   "NNESEESWNWW"];
   });
 
   it("Should initialise with empty data array", function() {

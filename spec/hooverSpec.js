@@ -1,6 +1,6 @@
 const Hoover = require('../src/Hoover')
 
-describe("Hoover class constructor", function() {
+describe("Hoover Class", function() {
 
   beforeEach(function() {
     testFloor =  {
@@ -9,10 +9,9 @@ describe("Hoover class constructor", function() {
     };
     testStartingPosition = [1, 2];
     hoover = new Hoover(testFloor, testStartingPosition);
-
     testDirections = [ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ];
     testEndPosition = [1, 3];
-
+    testInvalidDirections = [ 'W', 'W', 'W' ];
   });
   
   it("Should receive Floor object and hoover starting position initially", function() {
@@ -20,11 +19,6 @@ describe("Hoover class constructor", function() {
     expect(hoover.position).toEqual(testStartingPosition);
     expect(hoover.dirtCleaned).toEqual(0)
   })
-})
-
-
-describe("#move", function() {
-
 
   it("Should move hoover using full test directions and return final position", function() {
     hoover.move(testDirections);
@@ -36,4 +30,8 @@ describe("#move", function() {
     expect(hoover.dirtCleaned).toEqual(1);
   })
 
+  it("Should return true if hoover tries to move outside of floor grid", function() {
+    hoover.move(testInvalidDirections);
+    expect(hoover.wall()).toEqual(true);
+  })
 })

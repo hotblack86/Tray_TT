@@ -7,20 +7,18 @@ class Hoover {
   }
 
 
-  move(directions) {
-    
+  move(directions) { 
     directions.map(x => {
       if (x == 'N') {
-        this.position[1] += 1; }
+        if(!this.wall()) this.position[1] += 1; }
       else if (x == 'E') {
-        this.position[0] += 1; }
+        if(!this.wall()) this.position[0] += 1; }
       else if (x == 'S') {
-        this.position[1] -= 1; }
+        if(!this.wall()) this.position[1] -= 1; }
       else {
-        this.position[0] -= 1; }
+        if(!this.wall()) this.position[0] -= 1; }
     this.clean();
-    })
-    
+    })  
   }
 
   clean() {
@@ -33,9 +31,19 @@ class Hoover {
     })
   }
 
+  wall() {
+    let northWall = (this.position[1] >= this.floor.dimensions[1]);
+    let eastWall = (this.position[0] >= this.floor.dimensions[0]);
+    let southWall = (this.position[1] < 0);
+    let westWall = (this.position[0] < 0);
+
+    if(northWall || eastWall || southWall || westWall) return true;
+  }
+
   
   finalPosition() {
-  return this.position
+    var results = [this.position[0], this.position[1], this.dirtCleaned]
+    return results.join(' ')
   }
 }
 
@@ -49,11 +57,12 @@ console.log(hoover.floor.dimensions);
 console.log(hoover.position);
 console.log(hoover.floor.dirtPatches);
 console.log('\n');
-hoover.move([ 'S', 'S', 'S', 'S' ])
-// hoover.move([ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ]);
-console.log(hoover.position);
-console.log(hoover.dirtCleaned);
+// hoover.move([ 'N', 'N', 'E', 'N' ])
+hoover.move([ 'N', 'N', 'E', 'S', 'E', 'E', 'S', 'W', 'N', 'W', 'W' ]);
+console.log(hoover.position.join(' '));
+console.log(hoover.dirtCleaned.toString());
 console.log(hoover.floor.dirtPatches);
+// console.log(hoover.finalPosition());
 
 
 module.exports = Hoover;
