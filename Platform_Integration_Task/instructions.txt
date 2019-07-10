@@ -1,0 +1,60 @@
+Introduction
+
+You are speaking with a customer who’s keen to
+connect their CRM (Salesforce) with Slack, using the Tray.io platform. In Salesforce, “opportunities” are regularly created by sales reps to signify new deals that are being worked on.
+Whenever opportunities are created, the client would like a notification to be sent to a relevant Slack channel. Webhooks are sent as a POST request in JSON format, like the following:
+
+{
+"id": "0065800000BwzJt",
+"name": "Sample02",
+"status": "Qualification",
+"account": "Andrew Test",
+"close_date": "2017-03-16",
+"type": "New Business",
+"country": "UK", // can also be US or EU "owner_name": "Andrew", "owner_email": "andrew@tray.io", "amount": 4500
+}
+
+We are going to take the above as input, and use the Slack API to post these Slack messages to channels on the customer’s Slack team.
+
+The Tray.io platform provides a wrapper around the entire Slack API - all methods are available to you. You don’t need to have used Tray.io before - the key thing to understand is that Tray.io allows you to:
+● Accept the webhook input above
+● Make calls to the Slack API
+Links that you should use:
+● API homepage:  https://api.slack.com/
+● API methods:  https://api.slack.com/methods
+
+
+Integration requirements
+Notifications should be sent to Slack in the following format:
+(See Image)
+
+The customer is a global media business and has sales teams working in the US, the UK, and the EU. As such, a different Slack channel should be notified based on the value of the country selected when creating the Opportunity:
+● US: #sales-us
+● UK: #sales-uk
+● EU: #sales-eu  
+
+Bonus Assignment:
+As an additional requirement, let’s assume you are on a very low-cost version of Slack, that can only make 50 API calls per hour.
+You see your company also has the Amazon Simple Queue Service in its toolset. How would you amend the integration to accommodate this restriction?
+
+
+Test Goal
+Write up a document to be presented to the client detailing how this integration could be built.
+Key Sections:
+● High-level requirements - a couple of sentences clearly explaining what the integration should do
+● An overview of how the integration could work - for example, using a flowchart diagram
+● An explanation of how the data could be mapped from the input to the Slack API
+○ Reference the API methods you would use, and why
+○ Mention any other requirements to make this work (e.g. config, a database, other external APIs)
+● Follow up questions to clarify with the customer
+
+
+What you don’t need to do:
+● Reference or review the Salesforce API
+● Sign up to Salesforce or Slack to test this
+● Build the integration
+● Send any actual API calls
+● Write any code
+● Tell us what software stack you’d use to build this
+Please do take your time when implementing the test. It's important to show your ability to design and develop business-critical integrations and document them in a way our customers can understand. Feel free to ask any questions about the test, the role of Implementation Engineer, or just about life at Tray.
+Thanks for taking the time to complete this test, on behalf of all the Tray.io Team!
