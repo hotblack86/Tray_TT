@@ -14,7 +14,7 @@ A program that navigates an imaginary robotic hoover (much like a Roomba) throug
     Moves the hoover using the parsed input.txt directions.
     It returns the final hoover position and number of dirt patches cleaned.
 
-- Use TDD to build the project throughout.
+- Use TDD to build the project throughout. Using Jasmine testing framework.
 
 - Refactor after every test pass where possible, to keep methods skinny and code dry.
 
