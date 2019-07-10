@@ -58,10 +58,9 @@ describe("Hoover Class", function() {
     expect(hoover.wall).toHaveBeenCalled();
   })
 
-
-
   it("Should return final hoover position after bumping into wall twice", function() {
     hoover.move(testInvalidDirections);
     expect(hoover.position).toEqual(testInvalidEndPosition);
   })
+  
 })

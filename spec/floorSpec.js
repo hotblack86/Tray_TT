@@ -10,6 +10,4 @@ describe("Floor class", function() {
     expect(floor.dirtPatches).toEqual(testDirtPatches);
   })
   
-
-
 })
