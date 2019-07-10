@@ -1,14 +1,14 @@
 const fs = require('fs');
 
+// Datahandler Class is used to parse the input.txt file and return usable data from it
 class DataHandler {
   constructor(){
     this.datastore = [];
   }
 
   parse(input) {
-    var data = fs.readFileSync(input);
-    var filedata = data.toString().split('\n');
-    this.datastore.push(...filedata);   
+    var data = fs.readFileSync(input).toString().split('\n');
+    this.datastore.push(...data);   
   }
 
   roomDimensions() {
