@@ -28,12 +28,15 @@ git clone git@github.com:hotblack86/Tray_TT.git
 - go to repository folder
 ```
 cd Tray_TT
+```
 
 - make sure you have node and npm installed
 
 - install dependencies
 ```
 npm install
+```
+
 
 **Usage**
 - run the program with node
