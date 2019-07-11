@@ -15,27 +15,27 @@ The integration will return the notification from the Slack API and post a messa
 List of Slack API methods that support JSON posting used for the integration:
 
 - api.test
-    Check the API has been called correctly to avoid unwanted errors
+    - Check the API has been called correctly to avoid unwanted errors
 
 - auth.test
-    To make sure no one other than the client is trying to post to the Slack channels.
+    - To make sure no one other than the client is trying to post to the Slack channels.
 
 - chat.postMessage
-    Posts the notification as a Slack message.
+    - Posts the notification as a Slack message.
 
 - chat.delete
-    Deletes the message.
+    - Deletes the message.
 
 Methods that could be used for additional, hypothetical requirements:
 
 - chat.update
-    Updates the message if client wanted to edit the notification (i.e alter the close date or amount) rather than having to send a new notification.
+    - Updates the message if client wanted to edit the notification (i.e alter the close date or amount) rather than having to send a new notification.
 
 - pins.add
-    Pins the message to the channel. This could be useful to improve message visibility. Also prevents deletion of message by the free Slack plan.
+    - Pins the message to the channel. This could be useful to improve message visibility. Also prevents deletion of message by the free Slack plan.
 
-reactions.add
-    Allows people to react to the message with emoji.
+- reactions.add
+    - Allows people to react to the message with emoji.
 
 
 **Questions for Client**
