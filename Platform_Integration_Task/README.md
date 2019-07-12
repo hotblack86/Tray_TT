@@ -13,6 +13,8 @@ The Slack API will then post the message in the relevant Slack channel. Relevant
 
 **Overview**
 
+![Alt text](Platform_Integration_Task/Tray Integration FlowChart.png?raw=true "Optional Title")
+
 **Technicalities**
 
 List of Slack API methods that support JSON posting used for the integration:
