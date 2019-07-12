@@ -3,9 +3,9 @@
 
 **Requirements**
 
-The Tray.IO integration will take the opportunity notification as a webhook. This will be sent to the Slack API as a POST request in JSON format.
+The Tray.IO integration will take the opportunity notification as a webhook. This will be sent to the Tray.IO platform as a POST request in JSON format.
 
-The integration will retrieve the desired attributes from the JSON post and return them ready to be used by Slack.
+The integration will store all the data from the JSON post in a database. The relevant attributes will be retrieved from the db  ready to be used by Slack.
 
 
 The Slack API will then post the message in the relevant Slack channel. Relevant in this case relates to the location of the sales team (UK, US, EU) and is determined by the 'country' attribute in the Webhook.
