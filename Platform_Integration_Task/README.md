@@ -30,28 +30,21 @@ The FlowChart below shows how the Webhook can be manipulated to achieve the desi
 
 List of Slack API methods that support JSON posting used for the integration:
 
-- api.test
-    - Check the API has been called correctly to avoid unwanted errors
+- api.test   - Check the API has been called correctly to avoid unwanted errors
 
-- auth.test
-    - To make sure no one other than the client is trying to post to the Slack channels.
+- auth.test   - To make sure no one other than the client is trying to post to the Slack channels.
 
-- chat.postMessage
-    - Posts the notification as a Slack message.
+- chat.postMessage   - Posts the notification as a Slack message.
 
-- chat.delete
-    - Deletes the message.
+- chat.delete   - Deletes the message.
 
 Methods that could be used for additional, hypothetical requirements:
 
-- chat.update
-    - Updates the message.
+- chat.update  - Updates the message.
 
-- pins.add
-    - Pins the message to the channel. This could be useful to improve message visibility. Also prevents deletion of message by the free Slack plan.
+- pins.add   - Pins the message to the channel. This could be useful to improve message visibility. Also prevents deletion of message by the free Slack plan.
 
-- reactions.add
-    - Allows people to react to the message with emoji.
+- reactions.add   - Allows people to react to the message with emoji.
 
 
 A database would be used to store the notifications and set authorisation using the 'id' and 'owner_email' attributes.
