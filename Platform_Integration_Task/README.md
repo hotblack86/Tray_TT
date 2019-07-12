@@ -13,7 +13,7 @@ The Slack API will then post the message in the relevant Slack channel. Relevant
 
 **Overview**
 
-![Alt text](Platform_Integration_Task/Tray Integration FlowChart.png?raw=true "Optional Title")
+![alt text](https://github.com/hotblack86/Tray_TT/blob/master/Platform_Integration_Task/Tray%20Integration%20FlowChart.png)
 
 **Technicalities**
 
