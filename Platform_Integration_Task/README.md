@@ -13,7 +13,14 @@ The Slack API will then post the message in the relevant Slack channel. Relevant
 
 **Overview**
 
+The FlowChart below shows how the Webhook can be manipulated to achieve the desired outcome.
+
 ![alt text](https://github.com/hotblack86/Tray_TT/blob/master/Platform_Integration_Task/Tray%20Integration%20FlowChart.png)
+
+
+- Caveats
+    - The client's Slack channels need to have webhooks enabled. Information on how to do this can be found at:
+
 
 **Technicalities**
 
@@ -43,12 +50,15 @@ Methods that could be used for additional, hypothetical requirements:
     - Allows people to react to the message with emoji.
 
 
+A database would be used to store the notifications and set authorisation using the 'id' and 'owner_email' attributes.
+
+
 **Questions for Client**
 
 - Firstly, are you fully satisfied that this integration meets your requirements?
 
 - Can Tray provide clarification on any aspect of the integration?
-  - e.g Client might want reassurance that the notification is posted to the correct channel.
+  - e.g Client might want certainty that the notification is posted to the correct channel or reassurance that their data is secure in the database.
 
 
 - Are there any additional requirements that you might want?
