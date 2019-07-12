@@ -11,6 +11,7 @@ The integration will store all the data from the JSON post in a database. The re
 The Slack API will then post the message in the relevant Slack channel. Relevant in this case relates to the location of the sales team (UK, US, EU) and is determined by the 'country' attribute in the Webhook.
 
 
+
 **Overview**
 
 The FlowChart below shows how the Webhook can be manipulated to achieve the desired outcome.
@@ -20,6 +21,9 @@ The FlowChart below shows how the Webhook can be manipulated to achieve the desi
 
 - Caveats
     - The client's Slack channels need to have webhooks enabled. Information on how to do this can be found at:
+    https://api.slack.com/incoming-webhooks
+
+
 
 
 **Technicalities**
