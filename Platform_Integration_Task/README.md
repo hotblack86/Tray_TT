@@ -1,4 +1,4 @@
-**Implementation & Sales Engineer Candidate Test**
+*Implementation & Sales Engineer Candidate Test*
 ---
 
 **Requirements**
@@ -29,7 +29,7 @@ The FlowChart below shows how the Webhook can be manipulated to achieve the desi
 
 **Technicalities**
 
-List of Slack API methods that support JSON posting used for the integration:
+<ins>List of Slack API methods that support JSON posting used for the integration:</ins>
 
 - api.test   - Check the API has been called correctly to avoid unwanted errors
 
@@ -38,8 +38,9 @@ List of Slack API methods that support JSON posting used for the integration:
 - chat.postMessage   - Posts the notification as a Slack message.
 
 - chat.delete   - Deletes the message.
+</br>
 
-Methods that could be used for additional, hypothetical requirements:
+<ins>Methods that could be used for additional, hypothetical requirements:</ins>
 
 - chat.update  - Updates the message.
 
