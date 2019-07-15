@@ -1,8 +1,9 @@
-Implementation & Sales Engineer Technical Exercise
+**Implementation & Sales Engineer Technical Exercise**
 
 A program that navigates an imaginary robotic hoover (much like a Roomba) through an equally imaginary room.
+</br>
 
-**Approach:-**
+***Approach:-***
 
 - Seperate responsibility for the software into 3 classes:
   - DataHandler:
@@ -19,7 +20,7 @@ A program that navigates an imaginary robotic hoover (much like a Roomba) throug
 - Refactor after every test pass where possible, to keep methods skinny and code dry.
 
 
-**Installation**
+***Installation***
 - clone this repository
 ```
 git clone git@github.com:hotblack86/Tray_TT.git
@@ -38,7 +39,7 @@ npm install
 ```
 
 
-**Usage**
+***Usage***
 - run the program with node
 ```
 node index.js
@@ -50,3 +51,10 @@ The output from index.js will be visible in the console
 ```
 npm test
 ```
+
+
+If you wish, you can change the input in input.txt as long as the format is the same. Likewise if you have a different txt file you wish to use as input then simply change the parameter of the following line in index.js:
+```
+datahandler.parse('./your/path/to/file.txt"');
+```
+Again the format of the file must be the same as input.txt.
