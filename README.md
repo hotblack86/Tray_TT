@@ -21,36 +21,21 @@ A program that navigates an imaginary robotic hoover (much like a Roomba) throug
 
 
 ***Installation***
-- clone this repository
-```
-git clone git@github.com:hotblack86/Tray_TT.git
-```
+- clone this repository ``` git clone git@github.com:hotblack86/Tray_TT.git ```
 
-- go to repository folder
-```
-cd Tray_TT
-```
+- go to repository folder ``` cd Tray_TT ```
 
 - make sure you have node and npm installed
 
-- install dependencies
-```
-npm install
-```
+- install dependencies ``` npm install ```
 
 
 ***Usage***
-- run the program with node
-```
-node index.js
-```
+- run the program with node ``` node index.js ```
 The output from index.js will be visible in the console
 
 
-- run tests
-```
-npm test
-```
+- run tests ``` npm test ```
 
 
 If you wish, you can change the input in input.txt as long as the format is the same. Likewise if you have a different txt file you wish to use as input then simply change the parameter of the following line in index.js:
