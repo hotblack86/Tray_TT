@@ -50,7 +50,7 @@ The FlowChart below shows how the Webhook can be manipulated to achieve the desi
 
 </br>
 
-- A database would be used to store the notifications and set authorisation using the 'id' and 'owner_email' attributes.
+_A database would be used to store the notifications and set authorisation using the 'id' and 'owner_email' attributes._
 
 </br>
 </br>
