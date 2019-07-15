@@ -48,8 +48,9 @@ The FlowChart below shows how the Webhook can be manipulated to achieve the desi
 
 - reactions.add   - Allows people to react to the message with emoji.
 
+</br>
 
-A database would be used to store the notifications and set authorisation using the 'id' and 'owner_email' attributes.
+- A database would be used to store the notifications and set authorisation using the 'id' and 'owner_email' attributes.
 
 </br>
 </br>
